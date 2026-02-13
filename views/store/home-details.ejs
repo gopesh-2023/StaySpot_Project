@@ -1,0 +1,41 @@
+<%-include('../partials/head') %>
+ <link rel="stylesheet" href="/home-details.css">
+    </head>
+<body>
+    <header>
+        <%-include('../partials/nav') %>
+    </header>
+    <main>
+        <h1>This is the home details page </h1>
+        <div class="Details">
+            <div class="photo-details">
+               <li>
+                    <img  class="new-image"  src="<%=home.photo %>"  width="1000"/>
+                </li>
+            </div>
+             <div class="other-details">
+                <li>
+                    <%=home.homeName %>
+                </li>
+                 <li>
+                    <%=home.price %>
+                </li>
+                 <li>
+                    <%=home.location %>
+                </li>
+                 <li class="card-bottom">
+                    <button>Book Now</button>
+                </li>
+                <div>
+                <form action="/store/favourite" method="post">
+                    <button type="submit" class="Favourite">Add to Favourite</button>
+                    <input type="hidden" name="homeid" value="<%=home._id %>">
+                    </form>
+                </div>
+            </div>
+            
+                 
+        </div>   
+    </main>
+</body>
+</html>

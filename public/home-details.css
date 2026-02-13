@@ -1,0 +1,79 @@
+body{
+    background-color: white;
+    color: white;
+}
+nav{
+    background-color: red;
+    color: white;
+    display: flex;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+nav ul li{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.signUp-bar a{
+    margin-left: 20px;
+}
+header{
+   align-items: center;
+   justify-content: center;
+   
+}
+main
+{
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+    width: 600px;
+    border:solid black;
+    color: black;
+    justify-items: center;
+    margin-left: 300px;
+}
+.Details{
+    display: flex;
+}
+.photo-details{
+    display: flex;
+    padding-right: 20px;
+}
+.photo-details li{
+    list-style: none;
+}
+
+
+.other-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}   
+
+
+.new-image{
+    width: 200px;
+    border: solid black 3px;
+}
+.card-bottom{
+    padding: 10px;  
+}
+.Favourite{
+    background-color: rgb(0, 255, 26);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}

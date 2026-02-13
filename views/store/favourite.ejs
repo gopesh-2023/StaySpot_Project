@@ -1,0 +1,39 @@
+<%-include('../partials/head') %>
+ <link rel="stylesheet" href="/favourite.css">
+    </head>
+<body>
+    <header>
+        <%-include('../partials/nav') %>
+    </header>
+    <main>
+        <h1>Here our Registered Homes: </h1>
+        
+        <ul>
+            <%favouriteHomes.forEach(home=>{ %>
+                
+                <li>
+                    <img  class="new-image"  src="<%=home.photo %>"  width="1000"/>
+                </li>
+                <li>
+                    <%=home.homeName %>
+                </li>
+                 <li>
+                    <%=home.price %>
+                </li>
+                 <li>
+                    <%=home.location %>
+                </li>   
+                <li>
+                    <form action="/store/favourite/delete/<%=home._id%>" method="POST">
+                    <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <%}) %>
+        </ul>
+       
+        
+    </main>
+    
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<%-include('../partials/head') %>
+ <link rel="stylesheet" href="/addhome.css">
+    </head>
+<body>
+    <header>
+        <%-include('../partials/nav') %>
+    </header>
+    <main>
+         <h1><%=editing? "Edit":"Register"%> your home here</h1>
+        <form action="/host/<%=editing ? "edit-home": "add-home"%>" method="POST" enctype="multipart/form-data">    >
+            <input type="hidden" name="id"  value="<%=editing ? home._id:''%>">
+            <input class="details" type="text" name="homeName"
+            value="<%=editing ? home.homeName:''%>" placeholder="Enter home name" />
+            <input class="details" type="text"
+             value="<%=editing ? home.price:''%>" name="price" placeholder="Enter home price" />
+            <input class="details" type="text" 
+             value="<%=editing ? home.location:''%>" name="location" placeholder="Enter location" />
+            <input class="details" type="file" 
+              accept="image/jpg, image/png, image/jpeg"
+               name="photo" />
+             <textarea name="description" placeholder="Describe your Home" value="<%=editing ? home.description:''%>"></textarea>
+            
+            <input class="submit-button" type="submit" value="<%=editing ? "Update Home" :"Add Home"%>"/>
+        </form>
+
+    </main>
+      
+</body>
+</html>

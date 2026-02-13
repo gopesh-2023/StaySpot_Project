@@ -1,0 +1,40 @@
+<%-include('../partials/head') %>
+ <link rel="stylesheet" href="/addhome.css">
+    </head>
+<body>
+    <header>
+        <%-include('../partials/nav') %>
+    </header>
+    <main>
+         <h1>Register as a new user</h1>
+        <form action="/signup" method="POST">
+            <%-include('../partials/errors') %>
+
+            <input class="details" type="text" name="firstName" value="<%=oldInput.firstName ? oldInput.firstName:''%>" placeholder="First Name" required />
+            <input class="details" type="text" name="lastName" value="<%=oldInput.lastName ? oldInput.lastName:''%>" placeholder="Last Nane"  />
+            <input class="details" type="email" name="email" value="<%=oldInput.email ? oldInput.email:''%>" placeholder="test@pop.com" required />
+            <input class="details" type="password" name="password"  placeholder="Enter home Password" required /> 
+            <input class="details" type="password" name="confirmPassword"  placeholder="Confirm your Password" required />   
+            <div>
+            <p>User Type :</p>
+            <label>
+                <input type="radio" name="userType" value="guest" id="guest" <%= oldInput.userType === "guest" ? 'checked' : '' %> /><span>Guest</span>
+            </label>
+            <label>
+                <input type="radio" name="userType" value="host" id="host" <%= oldInput.userType === "host" ? 'checked' : '' %> /><span>Host</span>
+            </label>
+            </div>
+           
+           <div>
+           <input type="checkbox" name="terms" id="terms" required>
+           <label form="terms">I agree to the terms and conditions</label>
+           <br/>
+           </div>
+                            
+            <input class="submit-button" value="Register" type="submit" />
+        </form>
+
+    </main>
+      
+</body>
+</html>

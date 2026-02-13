@@ -1,0 +1,61 @@
+body{
+    background-color: white;
+    color: white;
+}
+nav{
+    background-color: red;
+    color: white;
+    display: flex;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+nav ul li{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: none;
+}
+.signUp-bar a{
+    margin-left: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+header{
+   align-items: center;
+   justify-content: center;
+   
+}
+main
+{
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+    width: 600px;
+    border:solid black;
+    color: black;
+    justify-items: center;
+    margin-left: 300px;
+}
+
+main ul{
+    padding: 10px;
+    list-style: none;
+    width: 210px;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: lightgray;
+   
+
+}
+.new-image{
+    width: 200px;
+    border: solid black 3px;
+}
+.card-bottom{
+    padding: 10px;  
+}

@@ -1,0 +1,30 @@
+<nav>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <% if(isLoggedIn){ %>
+                    <% if(user && user.userType==='guest'){ %>
+                
+                <li><a href="/store/bookings">Bookings</a></li>
+                <li><a href="/store/favourite">Favourite</a></li>
+                    <% }else{ %>
+                <li><a href="/host/add-home">Add Home Page</a></li>
+                <li><a href="/host/host-home-list">Host Homes</a></li>
+                <% } %>
+                <% } %>
+               
+                <% if(!isLoggedIn){ %>
+                 <li class="signUp-bar">
+                <a href="/login">Login</a>
+                <a href="/signup">SignUp</a>
+                </li>
+                <% } else{ %>
+                <li>
+                 <form action="/logout"  method="POST">
+                <button type="submit">Logout</button>
+
+                </form>
+                </li>
+                <% } %>
+                
+            </ul>
+        </nav>
